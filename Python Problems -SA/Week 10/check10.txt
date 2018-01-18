@@ -1,0 +1,80 @@
+check10.txt
+
+Edit this file and then submit it to autolab.
+
+Be sure to watch the videos very carefully, and not just
+skip ahead to the parts required to answer these questions!
+
+Be *very brief* in your answers!  Seriously.  Brief.
+
+---------------------------------------------------------------------
+
+1. Your full name and andrew id:
+
+	Shivum Agarwal
+	shivuma
+
+2. The full names and andrew ids of your groupmates, if you worked in a group.
+
+3. Dates/times that you watched the videos listed in check9.html (fill this out as you go):
+	10/29/17: 9:10pm - 10:15pm
+
+4. Total time this check required (fill this out when you are done):
+
+	About 1 hours
+
+5. Exceptions
+
+5.1 Consider the lastChar(s) function given on the notes page.  Write a simple try/except block that calls lastChar('') without the program crashing.
+	try:
+		return s[-1]
+	except:
+		“String must be non-empty”
+
+6. Functions Redux
+
+6.1 When using variable length args, why would you put a * in front of the argument when calling the function?
+
+	it packages all the args that are passed in as a big tuple
+
+6.2 What is the problem with using a mutable default argument?
+
+	It can treat the argument as a global variable so it can create the wrong snippet of code.
+	
+
+6.3 Look back at the animation framework used for this course.  Inside, we make use of lambda functions and functions as parameters.  Briefly describe how each is being used.
+	The lambda function is being uses to get the keypressed and mousepressed functions so that the actual keyboard keys and mouse can be used.
+
+6.4 What is the differences between making use of *args and **kwargs?
+
+	Instead of packaging the arguments into a tuple, it puts them in a dictionary.
+
+6.5 What is one reason you can think of to declare a function inside another function instead of making it global as we usually do?
+
+	Maybe there might be two functions with the same name and if they are both global, an error could occur, as such, it’s safer to keep them in different functions.
+
+6.7 Describe, in your own words, what a function decorator does.  What is the relationship between function decorators and functions that return functions?
+	It takes the function being decorated passes it into the decorator, so the function being decorated simply refers to the decorator.
+
+
+7. Recursion Part 2 Questions:
+
+7.1 Why would you need to expand the size of the stack?
+
+	The range of what is being recursed is too low so the stack needs to be expanded.
+
+7.2 Why is the memoized version of fib so much faster than the regular version?
+
+	It avoids the redundancy that would have otherwise happened. Prevents continuous redundancy so it’s much much faster.  
+
+7.3 Which advanced worked examples (from 1-5) was the most interesting to you?  Why?
+
+	I liked list files the most simply because it was able to go within multiple folders and put all the files into a list using recursion!
+
+7.4 In your own words, describe what a fractal is.
+	
+	It’s a geometric figure that can be drawn recursively.
+
+7.5 What is another problem you can think of that you might be able to solve using backtracking?
+
+	A sudoku seems like something that can be solved using backtracking.

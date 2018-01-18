@@ -1,0 +1,149 @@
+check4.txt
+
+Edit this file and then submit it to autolab.
+
+Be sure to watch the videos very carefully, and not just
+skip ahead to the parts required to answer these questions!
+
+Be *very brief* in your answers!  Seriously.  Brief.
+
+---------------------------------------------------------------------
+
+1. Your full name and andrew id:
+
+	Shivum Agarwal
+	shivuma
+
+2. The full names and andrew id's of your groupmates, if you worked in a group.
+
+3. Dates/times that you watched the videos listed in check4.html (fill this out as you go):
+
+	September 18: 8:44pm to 11:03 pm 
+	Finished graphics by 10:14pm (watched all videos)
+	
+
+4. Total time this check required (fill this out when you are done):
+
+	Close to 2.5 hours
+
+5. Graphics questions:
+
+5.1: How would you modify the provided code to make a 400x800 window?
+
+	Change the height and width variables in the main runDrawing function
+
+5.2: What do the four main variables in create_rectangle represent?
+
+	The first two variables (x,y) determine the coordinates of where the starting point (left top edge) of the rectangle is drawn. The second two variables (x,y) determine the coordinates of where the ending point (right bottom edge) of the rectangle is drawn.
+
+
+5.3: How do you get rid of the rectangle's outline?
+	
+	Set the width equal to 0	
+
+5.4: Why do we use rectWidth/2 and rectHeight/2 instead of rectWidth and rectHeight when drawing the inner rectangle?
+
+	Dividing by two lets you center a point thus going within the inner rectangle.
+ 
+5.5: Find the RGB values for your favorite color on http://www.rapidtables.com/web/color/RGB_Color.htm and write a line of code to generate a rectangle in that color. Paste your code here.
+	def createRGB(red, green, blue):
+		return “#%02x%02x%02x” %(0, 155, 254)
+
+5.6: How did we change the position of the 'Carpe Diem!' text without changing the given x and y values?
+
+	Anchor specifies where the point is on the box around the Carpe Diem Text
+
+5.7: Why did we use x1 instead of x0 + width*3/3 for the third stripe of the flag?
+
+	x1 = x0 + width*3/3
+
+5.8: Why do we use cy - r*sin(angle) when rotating around the circle?
+
+	Subtracting makes the numbers go clockwise because subtracting in graphics
+	means that you are going up. Sin is used simply because sin is a trig 		function used specifically for y values.
+
+5.9 Note the current time, then add a call to drawClock into draw that displays that time. Then trace through the code by hand. Make sure you understand how the minute and hour hands were generated in the correct positions. Include your new line of code below.
+	drawClock(canvas, 20,20, 170, 160, 2, 27)
+	
+6. 1d Lists and Tuples questions:
+
+6.1: Why is type([1,3,5,7]) == type(["a", "b", "c", "d"]) True?
+
+	That’s because there are elements within the list, an empty list would return false.
+
+6.2: What do you think a[:2] is, if a = [2, 3, 5, 7, 11, 13]? Check to see if you're right after making a prediction.
+
+	I predict [2, 3] I was right
+
+6.3: What problems could arise in your code due to function parameters being aliases?
+
+	I could accidentally edit one piece of code while writing the other
+
+6.4: Why should you check (if value in a) before calling a.index(value)?
+
+	It will cause an error if there is no value at the specific point in a list
+
+6.5: If a = [2, 3, 4, 5], what happens when you run a.insert(1, 42)?
+	It prints 42 at index 1 and shifts everything to the right of it one step
+
+6.6: What happens if you call .pop() on an empty list?
+
+	It creates an error
+
+6.7: We demonstrated two correct ways to swap elements in a list. Which do you think is clearer?
+
+	I like the tuple assignment because it’s more straightforward and faster
+
+6.8: Why is it a bad idea to modify a list while looping through it?
+
+	You could accidentally change the list by removing a value from the index and maybe the loop will crash as a result
+
+6.9: Is [] < [0]? Why or why not?
+
+	Yes because any list with one element is more than an empty string
+
+6.10: We demonstrated multiple ways to make a non-aliased copy of a. Which one do you think is best and why?
+
+	The second version because it clearly specifies the creation of a copy without causing any alias errors.
+
+6.11: Write a line of code that sorts a list of strings based on the length of the strings.
+	
+	for i in range (len(list)):
+		prev = “”
+		if (i == 0):
+			prev = list[i]
+		
+		else:
+			if (len(list[i]) < prev):
+				list[i] = prev 
+				list[i-1] = list[i]
+			
+		
+
+6.12: Why do some list functions not use return statements?
+
+	The list itself doesn’t need to be returned, it probably is used to print something.
+
+6.13: How are tuples different from lists?
+
+	They are immutable
+
+6.14: Write a list comprehension that has the same result as the following code:
+
+lst = []
+for i in range(10):
+    lst.append(i * 3)
+
+a = [i for i in range(10)]
+print(i*3)
+
+	
+
+6.15: We can change the delimiter (the text that separates values) in a piece of text using a combination of split and join. Write a line of code that change's the delimiter of the string s from "\t" to ",".
+
+s = s.split(“\t”)
+
+s = s.join(“,”)
+
+
+That's it!  Carpe diem!

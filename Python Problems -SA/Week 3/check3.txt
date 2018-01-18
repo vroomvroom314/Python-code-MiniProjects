@@ -1,0 +1,122 @@
+check3.txt
+
+Edit this file and then submit it to autolab.
+
+Be sure to watch the videos very carefully, and not just
+skip ahead to the parts required to answer these questions!
+
+Be *very brief* in your answers!  Seriously.  Brief.
+
+---------------------------------------------------------------------
+
+1. Your full name and andrew id:
+	Shivum Agarwal
+	shivuma
+
+2. The full names and andrew id's of your groupmates, if you worked in a group.
+
+3. Dates/times that you watched the videos listed in check3.html (fill this out as you go):
+	9/10/17: 9:48pm String Literals
+	9/11/17: 12:31pm: Some String Constants
+	9/11/17: 2:44pm: Some String Operators
+	9/11/17: 3:27pm: Looping over Strings
+	9/11/17: 3:46pm: isPalindrome	
+	9/11/17: 4:05pm: Some String-related Built-in Functions
+	9/11/17: 4:21pm: Some String Methods
+	9/11/17: 4:38pm: String Formatting
+
+4. Total time this check required (fill this out when you are done):
+	
+	Took about 4 and a half hours
+
+5. Strings questions (from the various String videos):
+
+5.1. Why is len('a\nb') equal to 3 and not 4?
+	
+	The slash “\” is not included when calculating the length of the string.
+
+5.2. List a character that is easier to include in a string delimited by double-quotes rather than single-quotes.
+
+	‘Hello’
+
+5.3. List each escape sequence mentioned in the video (like \n) and what they mean.
+
+	“” creates a simple string without spaces
+	\ emphasizes that the next character as a string and not an end
+	\n creates a new line
+	\t creates a tab
+
+5.4. What is type(string.digits)?  Why?
+
+	It’s a string that consists all the digits from 0 to 9
+
+5.5. For any string s where len(s)>1, is it definitely true that ((s[1:] in s) == True)?
+
+	No because sometimes there can be steps in between which will make s[1:] different.
+
+5.6. What is the empty string?  What is its type?  What is its length?
+
+	Empty string is a string without any characters. Its type is string and its length is 0
+
+5.7. What is "abcde"[-1]?
+	
+	e	
+
+5.8. What is 'abcde'[-1][-1]?  Briefly explain why that works, but 'abcde'[1][1] crashes.
+
+	It is e and it works because [-1][-1] accesses the first line of a string then takes the last element of it. [1][1] wouldn’t work because you would need to access a row that doesn’t exist in this case.
+
+5.9. Briefly, why did we write the function reverseString in the video, rather than just using s[::-1] in our code?
+
+	It’s cleaner and it makes it easier to consistently reverse other strings.
+
+5.10. Briefly, what is the difference between split and splitlines?
+
+	split takes a specific character and uses that character’s points to split
+	the string. Splitlines takes a string and sets newline equal to each line
+	in the multiline string.
+
+5.11. Please be sure to carefully watch the videos and take time
+to discuss and reflect on their content, and not just hurry through
+and answer all these questions.  The point of this check is not for
+you to answer the questions, but for you to learn the material.  So
+please take the time to learn the material well.  Ok?
+
+	YEAH!!!
+
+5.12. Of the first 4 ways we solve isPalindrome, which way do you think
+is the worst, and why so?
+
+	The last one is probably the worst because it constructs multiple strings making it the least efficient.
+
+5.12. What does it mean that Strings are immutable?
+
+	It means that they can’t be changed.
+
+5.13. What is the difference between a string method and a string function?
+
+	They are similar but methods are invoked differently. Functions are like
+	f(s) but a method is s.something().
+
+5.14. What is the difference between chr and ord?
+
+	ord gives you back the ASCII code
+	cha takes the code and gives you the actual character
+
+	They are inverses
+
+5.15. What is the difference between lower and islower?
+
+	lower actually lowers the String to lower case and islower returns a boolean
+	value for whether or not the string is lower case.
+
+5.16. How do you left-align text using the string formatting operator?
+
+	"%-10s %-10s" 
+
+5.17. Why does the Basic File IO example crash if you run it in the browser?
+	
+	It requires read-write access to the hard drive.
+
+That's it!  Carpe diem!
+

@@ -1,0 +1,140 @@
+check2.txt
+
+Edit this file and then submit it to Autolab.
+
+Be sure to watch the videos very carefully, and not just
+skip ahead to the parts required to answer these questions!
+
+Be *very brief* in your answers!  Seriously.  Brief.
+
+---------------------------------------------------------------------
+
+1. Your full name and andrew id:
+
+	Shivum Agarwal
+	shivuma
+
+2. The full names and andrew id's of your groupmates.  Note that if you worked solo on this, then copy-paste the timestamp line from the email
+from the course instructor permitting you to do so.
+	Pridhvi Vegesna
+	pvegesna
+
+	Young Kim
+	youngwo1
+
+3. Dates/times that you watched the videos listed in check2.html (fill this out as you go):
+
+4. Total time this check required (fill this out when you are done):
+
+
+5. "for loops" video:
+
+5.1. Briefly explain the meaning of each value m, n, and k in the expression range(m, n, k).
+
+	m is the initial starting point value in a loop, it’s inclusive
+	n is the ending point value in a loop, it’s exclusive
+	k is the step or the “every kth value” in a range from m to n
+
+5.2. What was so "terrible" about the last solution to sumOfOddsFromMToN?
+	
+	It’s too confusing and it’s hard to read and there is too much going on in one line of code.
+
+5.3. Run the last example of sumOfOddsFromMToN in the course notes, using the "Run" button in the course notes, so you are running it in Brython (in the browser).  Then, edit the code so that the third value in the range expression is the integer 0 instead of the integer 2.  Run it.  It will crash.  Copy-paste the error message here.  (Aside: is this what you expected?)
+
+	Traceback (most recent call last):
+ 	 module $exec_37 line 4
+  	  return sum(range(m + (1 - m%2), n+1, 0)) # this works, but it's gross!
+	ValueError: range() arg 3 must not be zero
+	[completed in 20 ms]
+
+Yeah because you can’t have every 0th value, it doesn’t make any sense.
+
+5.4. Repeat the previous problem, only here replace the third value with 0.1 instead of the integer 2.  Again, it will crash.  Copy-paste the error message here.  (Aside: is this what you expected?)
+
+	Traceback (most recent call last):
+  	module $exec_40 line 4
+   	 return sum(range(m + (1 - m%2), n+1, 0.1)) # this works, but it's gross!
+	TypeError: 'float' object cannot be interpreted as an integer
+	[completed in 19 ms]
+
+I didn’t expect that loops can’t use floating points for every kth value.
+
+
+6. "nested for loops" video:
+
+6.1. In the first example in this section, why do we use end="" in the inner print statement, but not in the outer print statement?
+
+The purpose of the outer loop is to make a new line, so if end=“” is there, a new line won’t be created
+
+6.2. What is the mystery star shape?
+
+	It’s a triangle that gets wider with each line so the base is wide and the top is a point.
+
+6.3. Modify the code for the mystery star shape so that it prints the same shape, only upside down (so the last row becomes the first row, and so on).  Include your code here.
+	
+	def printMysteryStarShape(n):
+    		for row in range(n):
+        		print(row, end=" ")
+        		for col in range(n-1-row):
+           			 print("*", end=" ")
+        		print()
+	
+	printMysteryStarShape(5)
+
+7. "while loops" video:
+
+7.1. When in general would you prefer a "while" loop to a "for" loop?
+
+	While loops are useful when you don’t know how many times you will have to loop.
+
+7.2. Why do we need to use a while loop in the leftmostDigit example?
+
+	It’s because we don’t know how many times we would need to loop through the number before we find the left most digit.
+
+7.3. What is the bug in the buggySumToN example?
+
+	The counter value increased before it’s added to the total, this causes the total to be a different value than what it should be. The total value becomes 21 instead of 15.
+
+
+8. "break and continue" video:
+
+8.1. What precisely does a break statement do?
+
+	It ends the loop right at the exact moment the break statement conditions are met.
+
+8.2. What precisely does a continue statement do?
+	
+	It ends the entire body of the code and it skips the rest of it and goes back to the top of the loop
+
+9. "isPrime" video:
+
+9.1. What would go wrong if we omitted the if statement at the start of isPrime?
+	
+	It would include 0 and 1 in the prime number print statement even though it’s neither prime nor composite
+
+9.2. What is it that makes fasterIsPrime so much faster than isPrime?  (Hint: it's not the bit about evens and odds (that helps, but not nearly so much as something else.))
+
+	fasterisPrime doesn’t loop through every single number in range from 2 to n, instead, it finds the square root and loops from three to the square root and it steps by two making the range smaller and thus much faster.
+
+9.3. Run the timing code (the last code in this section) using Brython in the browser.  How long does isPrime(499) take?  fasterIsPrime(499)?
+
+	isPrime(499) takes roughly 19 ms while fasterIsPrime takes 1 ms
+
+9.4. Repeat 9.3, only this time running the same code in Pyzo or Sublime.  Now how long do they take?  These numbers are very different from your answer to 9.3.  Very briefly, explain why.
+
+	It takes lest than 1/10th of a millisecond. This might be because Pyzo is an actual IDE while Brython is an online IDE meaning that additional processes may be done in Brython before the output is given.
+
+
+10. "nthPrime" video:
+
+10.1. In addition to its parameter n, nthPrime uses two local variables -- found and guess.  What precisely do each of these values mean here?
+
+	found essentially is the counter that goes up to the nth variable while guess is the actual nth prime number.
+
+10.2. Why does nthPrime use a while loop instead of a for loop?
+
+	Because we don’t know how long the loop is going be because n is a variable, not a fixed number. As such, a while loop is optimal in this case.
+
+
+That's it!  Carpe diem!
+

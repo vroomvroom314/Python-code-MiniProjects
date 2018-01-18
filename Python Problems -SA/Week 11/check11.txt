@@ -1,0 +1,65 @@
+check11.txt
+
+Edit this file and then submit it to autolab.
+
+Be sure to watch the videos very carefully, and not just
+skip ahead to the parts required to answer these questions!
+
+Be *very brief* in your answers!  Seriously.  Brief.
+
+---------------------------------------------------------------------
+
+1. Your full name and andrew id:
+	Shivum Agarwal
+ 	shivuma
+2. The full names and andrew ids of your groupmates, if you worked in a group.
+	
+
+3. Dates/times that you watched the videos listed in check11.html (fill this out as you go):
+		November 6 3:03pm to 4:11pm
+
+
+4. Total time this check required (fill this out when you are done):
+
+		About 1 hour
+
+5. OOP Part 2
+
+5.1. What is the difference between a superclass and a subclass?
+	a superclass is the class from which methods are inherited and a subclass is the one that actually inherits the methods from superclass.
+
+5.2. What does super().__init__(x) do?
+
+	it calls the init from the super class instead of the sub class.
+
+5.3. Using the code from 1.3, add two new lines that print type(b) == object and isinstance(b, object). What are the results? Why do you think you got these results?
+ 		
+		print(type(b) == object) == False
+		print(isinstance(b, object)) == True
+This occurred because b is an instance of the class B() so it is an object. However, it is not directly equal to object itself.
+
+
+5.4. Give an example of a case where you might want to use a class attribute and a case where you might want to use a static method.
+
+A static method is better when you are dealing with multiple classes and are trying to use functions that are meant to only be used for a specific class.
+
+An attribute is something that should be implemented when you want a similar trait between all instances of a class
+
+
+5.5. Section 4 demonstrates how you can access the properties of an instance with __dict__. Write a line of code that assigns a new property to an instance of A using __dict__.
+
+Scurry = Player(“Best PG ever”)
+Scurry.__dict__[“GOAT”]
+
+5.6. What core method needed to be added to make MovingDot move?
+
+the step method was vital because otherwise there would have been no increment in the dot x coordinates
+
+5.7. Let's say we want to change our code to make the dots squares instead of circles. Where in the code should we make this modification?
+
+In the draw method 
+
+5.8. Why is it a bad idea to check if drawnCard.suit == 1?
+
+	drawnCard.suit can cause an error
+
